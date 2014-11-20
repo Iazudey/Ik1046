@@ -1,0 +1,38 @@
+import javax.swing.JOptionPane;//importerar JOptionPane
+import java.text.NumberFormat;//importerar formateringen av nr. 
+
+public class labb2 {
+    
+public static void main(String[] args){
+    
+    // anropar numberformat
+    NumberFormat formatering = NumberFormat.getInstance(); 
+    //Här skapas variablarna vikt och längd med hjälp av datatypen double
+    double vikt; 
+    double langd; 
+     
+    //gör 2 dialogrutor som frågar om vikt samt längd.
+    //här får variablarna vikt och längd ett värde av användaren.
+    vikt = Double.parseDouble(JOptionPane.showInputDialog(null, "Vikt?", "Hur mycket väger du? ")) ;  
+    langd = Double.parseDouble(JOptionPane.showInputDialog(null, "Längd?", "Hur lång är du i meter?"));     
+    
+   //formeln för att räkna ut BMI med hjälp av vikt och längd
+    double bmi =  vikt / (langd * langd); 
+        
+    // if satser som beroende på vad bmi:t får för utslag så visas någon av dessa fyra dialogrutor. 
+    if (bmi<19){     
+         JOptionPane.showMessageDialog(null,"ditt BMI: " + formatering.format(bmi) +  "är mindre än 19, du är underviktig");
+     }// slut if-sats
+    else if (bmi>19 && bmi<25){
+        JOptionPane.showMessageDialog(null,"ditt BMI: " + formatering.format(bmi) +  "är mellan 19 och 25, din vikt är idealisk ");
+   }//slut if-sats
+
+    else if (bmi>19 && bmi<30){
+        JOptionPane.showMessageDialog(null,"ditt BMI: " + formatering.format(bmi)+  "är mellan 25 och 30, du är överviktig");
+    }//slut if-sats
+    else  if (bmi>30){ 
+    
+        JOptionPane.showMessageDialog(null,"ditt BMI: " + formatering.format(bmi)+  "är mellan 25 och 30, ditt bmi är väl över det rekommenderade värdet");
+    } // slut if-sats
+ }
+}
