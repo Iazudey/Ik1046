@@ -1,0 +1,35 @@
+IPO för labb2 
+
+
+Input:
+
+JOptionPane för inmatning av vikt och längd
+
+
+Process: 
+
+Längd + vikt => BMI
+
+Vikten / längden^2 = BMI 
+
+Output: 
+
+Numberformat 
+
+Antingen Joptionpane: 
+
+a.
+BMI
+mindre 19 ”Du är underviktigt”
+
+
+
+b.
+BMI mellan 19-25 ”Du har idealvikt”
+
+c.
+BMI större än 25 ”Du är överviktig”
+
+d. BMI större än 30 ”
+Ditt BMI är väl över det rekommenderade värdet
+”
